@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TypeRacer Pro — Typing Speed Test</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header>
+    <div class="logo">
+      <span class="logo-bracket">[</span>TYPE<span class="logo-accent">RACER</span><span class="logo-bracket">]</span>
+    </div>
+    <div class="best-score-display">
+      <span class="best-label">PERSONAL BEST</span>
+      <span class="best-value" id="bestScore">—</span>
+      <span class="best-unit">WPM</span>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME SCREEN -->
+    <section id="homeScreen" class="screen active">
+      <div class="home-hero">
+        <h1 class="hero-title">How fast<br/><em>do you type?</em></h1>
+        <p class="hero-subtitle">Test your speed. Track your accuracy. Beat your record.</p>
+      </div>
+
+      <div class="mode-select">
+        <p class="mode-label">SELECT MODE</p>
+        <div class="mode-grid">
+          <button class="mode-btn active" data-mode="30">
+            <span class="mode-time">30</span>
+            <span class="mode-unit">sec</span>
+            <span class="mode-tag">SPRINT</span>
+          </button>
+          <button class="mode-btn" data-mode="60">
+            <span class="mode-time">60</span>
+            <span class="mode-unit">sec</span>
+            <span class="mode-tag">STANDARD</span>
+          </button>
+          <button class="mode-btn" data-mode="120">
+            <span class="mode-time">120</span>
+            <span class="mode-unit">sec</span>
+            <span class="mode-tag">ENDURANCE</span>
+          </button>
+        </div>
+      </div>
+
+      <button class="start-btn" id="startBtn">
+        <span>START TEST</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </section>
+
+    <!-- TEST SCREEN -->
+    <section id="testScreen" class="screen">
+      <div class="test-header">
+        <div class="stat-pill">
+          <span class="stat-label">WPM</span>
+          <span class="stat-value" id="liveWpm">0</span>
+        </div>
+        <div class="timer-ring-wrap">
+          <svg class="timer-ring" viewBox="0 0 80 80">
+            <circle class="ring-bg" cx="40" cy="40" r="34"/>
+            <circle class="ring-fg" id="timerRing" cx="40" cy="40" r="34"/>
+          </svg>
+          <span class="timer-num" id="timerDisplay">60</span>
+        </div>
+        <div class="stat-pill">
+          <span class="stat-label">ACC</span>
+          <span class="stat-value" id="liveAcc">100%</span>
+        </div>
+      </div>
+
+      <div class="passage-wrap">
+        <div class="passage" id="passage"></div>
+      </div>
+
+      <div class="input-wrap">
+        <input
+          type="text"
+          id="typingInput"
+          class="typing-input"
+          placeholder="Start typing here…"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+        />
+        <div class="input-underline"></div>
+      </div>
+
+      <button class="ghost-btn" id="restartBtn">↺ restart</button>
+    </section>
+
+    <!-- RESULTS SCREEN -->
+    <section id="resultsScreen" class="screen">
+      <div class="results-header">
+        <p class="results-label">YOUR RESULTS</p>
+        <div class="results-wpm">
+          <span class="results-num" id="finalWpm">0</span>
+          <span class="results-wpm-label">WPM</span>
+        </div>
+        <div class="results-rank" id="resultsRank"></div>
+      </div>
+
+      <div class="results-stats">
+        <div class="result-card">
+          <span class="rcard-icon">🎯</span>
+          <span class="rcard-value" id="finalAcc">0%</span>
+          <span class="rcard-label">Accuracy</span>
+        </div>
+        <div class="result-card">
+          <span class="rcard-icon">✅</span>
+          <span class="rcard-value" id="finalCorrect">0</span>
+          <span class="rcard-label">Correct</span>
+        </div>
+        <div class="result-card">
+          <span class="rcard-icon">❌</span>
+          <span class="rcard-value" id="finalErrors">0</span>
+          <span class="rcard-label">Errors</span>
+        </div>
+        <div class="result-card">
+          <span class="rcard-icon">⌨️</span>
+          <span class="rcard-value" id="finalChars">0</span>
+          <span class="rcard-label">Chars Typed</span>
+        </div>
+      </div>
+
+      <div class="results-pb" id="newPbBanner" style="display:none">
+        🏆 New Personal Best!
+      </div>
+
+      <div class="results-actions">
+        <button class="start-btn" id="retryBtn">
+          <span>TRY AGAIN</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="ghost-btn" id="homeBtn">← home</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built with vanilla HTML · CSS · JS &nbsp;|&nbsp; No frameworks, no dependencies</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
