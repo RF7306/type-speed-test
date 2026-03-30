@@ -1,12 +1,12 @@
 # ⌨️ TypeRacer Pro — Typing Speed Test
 
-A clean, fast, and fully client-side typing speed test built with **vanilla HTML, CSS, and JavaScript** — zero frameworks, zero dependencies, zero build steps.
+A clean, fast, and fully client-side typing speed test built with **vanilla HTML, CSS, and JavaScript**
 
 ![TypeRacer Pro Demo](./screenshot.png)
 
 ---
 
-## 🧩 Project Description
+## Project Description
 
 **TypeRacer Pro** measures how fast you type in words-per-minute (WPM) with live feedback on accuracy. It highlights each character as you type — green for correct, red for wrong — and counts down a configurable timer. At the end it shows your WPM, accuracy, error count, and compares against your personal best (stored locally in your browser).
 
@@ -14,7 +14,7 @@ A clean, fast, and fully client-side typing speed test built with **vanilla HTML
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 | Layer | Choice | Reason |
 |---|---|---|
@@ -28,7 +28,7 @@ No npm. No webpack. No React. No build pipeline.
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### Option A — Open directly (easiest)
 
@@ -61,7 +61,7 @@ python3 -m http.server 8080
 
 ---
 
-## 🎮 Usage
+## Usage
 
 1. **Pick a mode** — 30 sec (Sprint), 60 sec (Standard), or 120 sec (Endurance)
 2. **Click START TEST**
@@ -73,17 +73,8 @@ python3 -m http.server 8080
 
 ---
 
-## 📸 Screenshots
 
-| Home Screen | Test In Progress | Results |
-|---|---|---|
-| Select mode and start | Live character highlighting + timer | WPM, accuracy, rank |
-
-> *Add actual screenshots here after first run — drag images into the repo and reference them above.*
-
----
-
-## 🗂 Project Structure
+## Project Structure
 
 ```
 typing-speed-test/
@@ -103,9 +94,9 @@ typing-speed-test/
 
 ---
 
-## 🤖 AI Acknowledgment
+## AI Acknowledgment
 
-This project was built with assistance from **Claude (Anthropic)**. Here is a precise account of how it was used:
+This project was built with assistance from **Claude**. Here is a precise account of how it was used:
 
 ### Claude was used for:
 
@@ -132,11 +123,11 @@ Claude generated the dark terminal colour palette (CSS custom properties) and th
 **6. README structure**
 Claude helped outline this README's sections. All content was written and reviewed by me.
 
-> **All AI-generated code was read, understood, tested, and modified before inclusion. No code was blindly copy-pasted.**
+> **All AI-generated code was read, understood, tested, and modified before inclusion.**
 
 ---
 
-## 📋 Commit History
+## Commit History
 
 ```
 git log --oneline
@@ -149,17 +140,3 @@ mno7890  Initial project scaffold: index.html, style.css, script.js, .gitignore
 ```
 
 ---
-
-## 🚀 Possible Extensions
-
-- [ ] Custom passage upload
-- [ ] Multiplayer via WebSockets
-- [ ] Historical WPM chart (Chart.js)
-- [ ] Keyboard heatmap showing which keys you miss most
-- [ ] More passage categories (code snippets, poetry, news)
-
----
-
-## 📄 License
-
-MIT — free to use, modify, and distribute.
