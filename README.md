@@ -24,7 +24,6 @@ A clean, fast, and fully client-side typing speed test built with **vanilla HTML
 | Storage | Web `localStorage` | Persist personal best score between sessions |
 | Fonts | Google Fonts (Space Mono + DM Sans) | Loaded via CDN link tag |
 
-No npm. No webpack. No React. No build pipeline.
 
 ---
 
